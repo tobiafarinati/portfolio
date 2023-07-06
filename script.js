@@ -20,4 +20,11 @@ window.onclick = function(event) {
         }
     }
 }
+
 //Close button for modals
+function CloseModal() {
+    var modal = document.getElementsByClassName("modal");
+    for (var i = 0; i < modal.length; i++) {
+        modal[i].style.display = "none";
+    }
+}
