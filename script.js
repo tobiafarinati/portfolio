@@ -21,4 +21,18 @@ window.onclick = function(event) {
     }
 }
 
+window.ontouchstart = function(event) {
+
+    //For multiple modals
+    var more = document.getElementsByClassName("modal");
+    //i represents which modal. It will go through all modals
+    for (var i = 0; i < more.length; i++) {
+        //If the click was on the modal for one of the modals display = "none"
+        //for all of them
+        if (event.target == more[i]) {
+            more[i].style.display = "none";
+        }
+    }
+}
+
 //Close button for modals
