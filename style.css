@@ -1,0 +1,152 @@
+html, body {
+  padding: 0em;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+}
+
+
+* {
+  box-sizing: border-box;
+  font-family: Helvetica;
+}
+
+::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+/*body*/
+h1 {
+  font-family: Helvetica;
+  color: black;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+a {
+  font-family: Helvetica;
+  color: black;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+a:hover {
+  font-family: Helvetica;
+  color: black;
+  text-decoration: underline;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+/*BOXES*/
+.box {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+/*GRIGLIA INDEX*/
+.grid-container1 {
+  display: inline-grid;
+  grid: auto / 15% 83%;
+  grid-column-gap: 2vw;
+  grid-row-gap: 2vw;
+  width: 100%;
+}
+
+.grid-item1 {
+  margin: 0px;
+  width: 100%;
+}
+
+.grid-item1:last-child {
+  margin: 0px;
+  width: 100%;
+  display: block;
+  overflow-y: scroll;
+  height: 100vh;
+  padding-left: 1px;
+}
+
+/*GRID INSIDE GRID*/
+.grid-container2 {
+  padding-top: 0em;
+  display: inline-grid;
+  grid: auto / 32% 32% 32%;
+  grid-column-gap: 2vw;
+  grid-row-gap: 2vw;
+  width: auto;
+}
+
+.grid-item2 > img {
+  width: 100%;
+  height: auto;
+}
+
+/*MODAL*/
+.modal {
+  display: none;
+  background-color: white;
+  height: 100vh;
+  width: 83%;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+/*makes things responsive*/
+/* Medium (tablet, 768px and down) */
+@media only screen and (max-width: 1080px) {
+  .grid-container2 {
+    padding-top: 0em;
+    display: inline-grid;
+    grid: auto / 49% 49%;
+    grid-column-gap: 2vw;
+    grid-row-gap: 2vw;
+    width: 100%;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 700px) {
+  .box {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .grid-container1 {
+    padding-top: 0em;
+    display: inline-grid;
+    grid: auto / 100%;
+    grid-column-gap: 2vw;
+    grid-row-gap: 2vw;
+   width: 100%;
+  }
+
+  .grid-item1:last-child {
+    margin: 0px;
+    width: 100%;
+    overflow-y: scroll;
+    height: 100vh;
+    border-top: 1px solid black;
+  }
+
+  .grid-container2 {
+    padding-top: 0em;
+    display: inline-grid;
+    grid: auto / 100%;
+    grid-column-gap: 2vw;
+    grid-row-gap: 2vw;
+    width: 100%;
+  }
+}
