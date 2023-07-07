@@ -225,7 +225,7 @@ a:hover {
     display: inline-grid;
     grid: auto / 100%;
     grid-column-gap: 2%;
-    grid-row-gap: 0.7%;
+    grid-row-gap: 1.4%;
    width: 100%;
   }
   
@@ -261,7 +261,6 @@ a:hover {
   .modal {
     display: none;
     position: absolute;
-    position: fixed;
     overflow-y: scroll;
     background-color: white;
     height: 100%;
@@ -270,7 +269,6 @@ a:hover {
     right: 0;
     padding-bottom: 0px;
     padding: 8px;
-    z-index: 2;
   }
 
   .box {
