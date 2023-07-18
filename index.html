@@ -1,144 +1,208 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>TobiaFarinati</title>
+<html lang="en">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1"
-    http-equiv="Content-Type" content="text/html; charset=utf-8">
-	  <link rel="stylesheet" href="style.css" type="text/css">
-    <script src="script.js"></script>
-  </head>
+<head>
+	<meta charset="UTF-8">
+	<title>tobiafarinati</title>
+	<link rel="stylesheet" href="./style.css">
 
-  <body>
-    <div class="grid-container1">
-      <div class="grid-item1">
-        <h2 onclick="myFunction()">TF</h2>
-        <div style="display:none" id="myDIV">
-          <p class="box3">
-            Un giorno usciremo per le strade,
-            cambieremo i semafori e le luci,
-            offriremo cipolle agli amici,
-            dormiremo insieme in calde stanze tutte rosa,
-            romperemo l'asfalto con dei giardini colorati,
-            romperemo l'asfalto con dei giardini colorati<br><br>
-            — Paranoia</p>
-          </div>
+</head>
 
-        <div class="box">
-          <a href="mailto:tobiafarinati@gmail.com">mail</a>
-          <a href="https://www.instagram.com/tobiafarinati/">instagram</a>
-        </div>
-      </div>
+<body>
+	<div class="left">
+		<h2 onclick="myFunction()">TF</h2>
+		<div style="display:none" id="myDIV">
+			<p class="box1">
+				Un giorno usciremo per le strade,
+				cambieremo i semafori e le luci,
+				offriremo cipolle agli amici,
+				dormiremo insieme in calde stanze tutte rosa,
+				romperemo l'asfalto con dei giardini colorati,
+				romperemo l'asfalto con dei giardini colorati<br><br>
+			</p>
+		</div>
+		<div class="box">
+			<a href="https://www.instagram.com/tobiafarinati/">instagram</a>
+			<a href="mailto:tobiafarinati@gmail.com">mail</a>
+		</div>
+	</div>
 
-      <div class="grid-item1">
-        <!--FINESTRE MODALI-->
-        <!--Proj1-->
-        <div class="modal">
-          <p class="close" onclick="CloseModal()">&times;</p>
-          <h1>/CEM Kamanar</h1>
-          <h1 class="box1" >A publishing project, an archive of the construction of the ‘Hagamos escuela’ in Senegal. The boxed set containing three volumes looks like a brick, the basic unit of the school structure; the inside pages tell the story of the project, the cover of each boxed set can be broken down to create a paper model 
-            of the school.
-            </h1>
-            <p>2021 <br> with Studio Bildi</p>
-          <img class="box2" src="img/1.jpg">
-          <img class="box2" src="img/2.jpg">
-          <img class="box2" src="img/3.jpg">
-          <img class="box2" src="img/4.jpg">
-          <img class="box2" src="img/5.jpg">
-          <img class="box2" src="img/6.jpg">
-          <img class="box2" src="img/7.jpg">
-          <img class="box2" src="img/8.jpg">
-          <img class="box2" src="img/9.jpg">
-          <img class="box2" src="img/10.jpg">
-          <img class="box2" src="img/11.jpg">
-          <img class="box2" style="margin-bottom: 10px;" src="img/12.jpg">
-        </div>
+	<div class="right">
+		<h1>Projects</h1>
+		<div class="container">
 
-        <!--Proj2-->
-        <div class="modal">
-          <p class="close" onclick="CloseModal()">&times;</p>
-          <h1>/albe</h1>
-        </div>
+			<div class="item">
+				<h3 class="caption">CEM kamanar</h3>
+				<img class="js-modal-open" data-modal-id="1" src="img/2.jpg">
+			</div>
 
-         <!--Proj3-->
-         <div class="modal">
-          <p class="close" onclick="CloseModal()">&times;</p>
-          <h1>/alb</h1>
-        </div>
-
-        <!--Proj4-->
-        <div class="modal">
-          <p class="close" onclick="CloseModal()">&times;</p>
-          <h1>/al</h1>
-        </div>
-
-        <!--Proj5-->
-        <div class="modal">
-          <p class="close" onclick="CloseModal()">&times;</p>
-          <h1>/al</h1>
-        </div>
-
-        <!--Proj6-->
-        <div class="modal">
-          <p class="close" onclick="CloseModal()">&times;</p>
-          <h1>/al</h1>
-        </div>
+			<div class="item">
+				<h3 class="caption">TEATRO TALEA</h3>
+				<img class="js-modal-open" data-modal-id="2" src="img/016.GIF">
+			</div>
 
 
-        <!--GRIGLIA PROGETTI-->
-        <h1>/projects</h1>
+			<div class="item">
+				<h3 class="caption">Evasioni botaniche</h3>
+				<img class="js-modal-open" data-modal-id="3" src="img/25.GIF">
+			</div>
 
-        <div style="margin-top: 14px;" class="grid-container2">
-          <!--Proj1-->
-          <div class="grid-item2">
-            <img onclick="OpenMore(0)" src="img/2.jpg">
-              <p id="box4">CEM Kamanar</p>
-          </div>
+			<div class="item">
+				<h3 class="caption">CEM kamanar</h3>
+				<img class="js-modal-open" data-modal-id="4" src="img/1.jpg">
+			</div>
 
-          <!--Proj2-->
-          <div class="grid-item2">
-           <img onclick="OpenMore(1)" src="img/albe.png">
-           <p id="box4">Albe</p>
-          </div>
+			<div class="item">
+				<h3 class="caption">CEM kamanar</h3>
+				<img class="js-modal-open" data-modal-id="5" src="img/1.jpg">
+			</div>
 
-          <div class="grid-item2">
-          <img onclick="OpenMore(2)" src="img/talea2.jpeg">
-          <p id="box4">Albe</p>
-          </div>
+			<div class="item">
+				<img class="js-modal-open" data-modal-id="6" src="img/1.jpg">
+			</div>
 
-          <div class="grid-item2">
-            <img onclick="OpenMore(3)" src="img/talea2.jpeg">
-            <p id="box4">Albe</p>
-          </div>
+			<div class="item">
+				<img class="js-modal-open" data-modal-id="7" src="img/1.jpg">
+			</div>
 
-          <div class="grid-item2">
-           <img onclick="OpenMore(4)" src="img/talea2.jpeg">
-           <p id="box4">Albe</p>
-          </div>
+			<div class="item">
+				<img class="js-modal-open" data-modal-id="8" src="img/1.jpg">
+			</div>
 
-          <div class="grid-item2">
-          <img onclick="OpenMore(5)"src="img/talea2.jpeg">
-          <p id="box4">Albe</p>
-          </div>
+			<div class="item">
+				<img class="js-modal-open" data-modal-id="9" src="img/1.jpg">
+			</div>
 
-            <div class="grid-item2">
-            <img onclick="OpenMore(6)"src="img/talea2.jpeg">
-          </div>
+			<div class="item">
+				<img class="js-modal-open" data-modal-id="10" src="img/1.jpg">
+			</div>
 
-          <div class="grid-item2">
-           <img src="img/talea2.jpeg">
-          </div>
+			<div class="item">
+				<img class="js-modal-open" data-modal-id="11" src="img/1.jpg">
+			</div>
 
-          <div class="grid-item2">
-          <img src="img/talea2.jpeg">
-          </div>
-        </div>
+			<div class="item">
+				<img class="js-modal-open" data-modal-id="12" src="img/1.jpg">
+			</div>
 
-      </div>
-      
-    
-    
+			<div class="item">
+				<img class="js-modal-open" data-modal-id="13" src="img/1.jpg">
+			</div>
 
-    </div>
-  </body>
+			<div class="item">
+				<img class="js-modal-open" data-modal-id="14" src="img/1.jpg">
+			</div>
+
+			<div class="item">
+				<img class="js-modal-open" data-modal-id="15" src="img/1.jpg">
+			</div>
+
+			<div class="item">
+				<img class="js-modal-open" data-modal-id="16" src="img/1.jpg">
+			</div>
+			<!--MODAL PJ1-->
+			<div id="modal">
+				<div class="modal-wrap js-modal" id="1">
+					<div class="modal-inner">
+						<div class="modal-head">
+							<h1 style="float: left;">CEM kamanar</h1>
+							<h1 style="float: right;" class="js-modal-close">&times;</h1>
+						</div>
+						<div class="modal-body">
+							<div class="box2">
+								<h1> A publishing project, an archive of the construction of the ‘Hagamos escuela’ in
+									Senegal.
+									The boxed set containing three volumes looks like a brick, the basic unit of the
+									school
+									structure; the inside pages tell the story of the project, the cover of each boxed
+									set can be
+									broken down to create a paper model of the school.
+								</h1>
+
+								<p>2021 <br> with Studio Bildi</p>
+							</div>
+							<img src="img/1.jpg">
+							<img src="img/2.jpg">
+							<img src="img/3.jpg">
+							<img src="img/4.jpg">
+							<img src="img/5.jpg">
+							<img src="img/6.jpg">
+							<img src="img/7.jpg">
+							<img src="img/8.jpg">
+							<img src="img/9.jpg">
+							<img src="img/10.jpg">
+							<img src="img/11.jpg">
+							<img src="img/12.jpg">
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<!--MODAL PJ2-->
+			<div id="modal">
+				<div class="modal-wrap js-modal" id="2">
+					<div class="modal-inner">
+						<div class="modal-head">
+							<h1 style="float: left;">TEATRO TALEA</h1>
+							<h1 style="float: right;" class="js-modal-close">&times;</h1>
+						</div>
+						<div class="modal-body">
+							<div class="box2">
+								<h1> Teatro Talea is an experimental theater that takes classic works and rearranges
+									them with an electronic sound landscape. Various musicians, starting with Wendy
+									Carlos, one of the first composers to experiment with synthesizers (specifically
+									Moog), have reinterpreted classical music works in an electronic key. Thus, it was
+									imagined that Teatro Talea could do the same with theatrical works, sound effects,
+									and their soundtracks. In addition to the actors, we imagined an orchestra
+									consisting solely of electronic instruments that interpret the scene on a musical
+									level.
+								</h1>
+
+								<p>2023 <br> with Teresa Pettini</p>
+							</div>
+							<img src="img/17.jpg">
+							<img src="img/18.jpg">
+							<img src="img/19.jpg">
+							<img src="img/21.jpg">
+							<img src="img/22.jpg">
+							<img src="img/23.jpg">
+							<img src="img/16.jpg">
+							<img src="img/20.jpg">
+							<img src="img/24.jpg">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--MODAL PJ3-->
+			<div id="modal">
+				<div class="modal-wrap js-modal" id="3">
+					<div class="modal-inner">
+						<div class="modal-head">
+							<h1 style="float: left;">TEATRO TALEA</h1>
+							<h1 style="float: right;" class="js-modal-close">&times;</h1>
+						</div>
+						<div class="modal-body">
+							<div class="box2">
+								<h1> Evasioni Botaniche is a project that seeks to highlight our personal view of plants as active habitants of the botanical garden, seeking not to passively suffer the rules and order imposed by humans but to escape from it, seeking their own autonomous path. The photographic part is joined by parts of Alexander Supertramp's diary that make a connection between common will of plants and human in modern society.
+									This project was made with Tobia Farinati during the course of editorial design at ISIA U.
+								</h1>
+
+								<p>2023 <br> with Teresa Pettini</p>
+							</div>
+							<img src="img/25.GIF">
+							<img src="img/26.jpg">
+							<img src="img/27.jpg">
+							<img src="img/28.jpg">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+	<script src="./script.js"></script>
+</body>
+
 </html>

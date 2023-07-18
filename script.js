@@ -1,40 +1,54 @@
-//Multiple Modals
-function OpenMore(n) {
-    //Get elements with class="modal" into an array
-    var modal = document.getElementsByClassName("modal");
-    //Change style of modal number [n] to display = "block"
-    modal[n].style.display = "block";
-}
+var mdzIndex = 10;
+$('.js-modal-open').on('click', function (e) {
+	e.preventDefault();
+	mdzIndex++;
+	var mdId = $(this).data('modal-id');
+	if (mdId === null || mdId === '') return true;
+	$('#' + mdId).addClass('js-is-active').css({ 'z-index': mdzIndex });
+});
 
-//This will close the modal once you click on it
-window.onclick = function(event) {
+$('.js-modal-close').on('click', function () {
+	$(this).closest('.js-modal').removeClass('js-is-active').css({ 'z-index': '' });
+	if ($('.js-modal.js-is-active').length === 0) {
+		mdzIndex = 10;
+	}
+});
 
-    //For multiple modals
-    var more = document.getElementsByClassName("modal");
-    //i represents which modal. It will go through all modals
-    for (var i = 0; i < more.length; i++) {
-        //If the click was on the modal for one of the modals display = "none"
-        //for all of them
-        if (event.target == more[i]) {
-            more[i].style.display = "none";
-        }
-    }
-}
-
-//Close button for modals
-function CloseModal() {
-    var modal = document.getElementsByClassName("modal");
-    for (var i = 0; i < modal.length; i++) {
-        modal[i].style.display = "none";
-    }
-}
+$('.js-modal').on('click', function (e) {
+	if ($(e.target).hasClass('js-modal')) {
+		$(this).find('.js-modal-close').trigger('click');
+	}
+});
 
 //toggle about
 function myFunction() {
-    var x = document.getElementById("myDIV");
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
-    }
-  }
+	var x = document.getElementById("myDIV");
+	if (x.style.display === "none") {
+		x.style.display = "block";
+	} else {
+		x.style.display = "none";
+	}
+}
+
+//IMAGE HOVER
+$(document).ready(function () {
+
+	//target the parent div with the function
+	$(".item").hover(function (evt) {
+
+		//find the image and animate the opacity
+		$(this).find("img").stop().animate({
+			opacity: 0
+		}, 0);
+		//find and show the caption 
+		$(this).find(".caption").show();
+	},
+		function (evt) {
+			//reverse the animations on mouseout
+			$(this).find("img").stop().animate({
+				opacity: 1
+			}, 100);
+			$(this).find(".caption").hide();
+		}
+	);
+});
