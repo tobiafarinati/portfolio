@@ -52,15 +52,20 @@ h3 {
     z-index: 1;
     position: absolute;
     font-family: Helvetica;
+    font-weight: 500;
     color: black;
-    font-size: 14px;
-    line-height: 14.5px;
+    font-size: 12px;
+    line-height: 12.5px;
+    margin-top: 0;
+    padding: 3px;
     display: none;
+    background-color: grey;
 }
 
 p {
     font-family: Helvetica;
     color: black;
+    font-weight: 500;
     text-decoration: none;
     text-justify: inter-character;
     font-size: 12px;
@@ -70,6 +75,7 @@ p {
 a {
     font-family: Helvetica;
     color: black;
+    font-weight: 500;
     text-decoration: none;
     text-justify: inter-character;
     font-size: 12px;
@@ -79,13 +85,42 @@ a {
 a:hover {
     font-family: Helvetica;
     color: black;
+    font-weight: 500;
     text-decoration: underline;
     text-justify: inter-character;
     font-size: 12px;
     line-height: 12px;
 }
 
+.box3>a {
+    font-family: Helvetica;
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+    text-justify: inter-character;
+    font-size: 14px;
+    line-height: 14.5px;
+    margin-top: 11.620px;
+    margin-bottom: 7px;
+}
+
+.box3>a:hover {
+    font-family: Helvetica;
+    color: black;
+    text-decoration: underline;
+    text-justify: inter-character;
+    font-size: 14px;
+    line-height: 14.5px;
+}
+
 /*COLUMNS HOMEPAGE*/
+.cont {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
 .left {
     position: absolute;
     width: calc(20% - 18px);
@@ -109,7 +144,7 @@ a:hover {
 
 /*BOXES*/
 .box {
-    margin-top: 100px;
+    margin-top: 250px;
     left: 0;
     width: 100%;
     display: flex;
@@ -118,17 +153,23 @@ a:hover {
 }
 
 .box1 {
-    width: 90%;
-    height: auto;
-    display: flex;
-    padding-top: 7px;
-    flex-direction: column;
-    flex-wrap: wrap;
+    position: absolute;
+    margin-top: 0;
+    width: 80%;
+    padding: 3px;
+    background-color: grey;
 }
 
 .box2 {
     width: 70%;
     height: auto;
+}
+
+.box3 {
+    width: 100%;
+    display: inline-block;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
 /*MODAL*/
@@ -155,6 +196,7 @@ a:hover {
 }
 
 .modal-head {
+    margin-top: 2px;
     position: relative;
     height: auto;
     flex-direction: column;
@@ -199,6 +241,13 @@ a:hover {
     cursor: pointer;
 }
 
+.item>video {
+    z-index: 0;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
 /*JS MODAL*/
 .js-modal {
     display: none;
@@ -211,9 +260,125 @@ a:hover {
 /* Medium (tablet, 768px and down) */
 @media only screen and (max-width: 1080px) {
 
+    .container {
+        display: inline-grid;
+        grid: auto / auto auto;
+        grid-column-gap: 10px;
+        grid-row-gap: 7px;
+        width: 100%;
+    }
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 700px) {
+    .cont {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .left {
+        position:sticky;
+        width: 100%;
+        height: auto;
+        overflow-y: scroll;
+        top: 0;
+        left: 0;
+        padding-left: 0;
+        padding-right: 0;
+        background-color: white;
+        z-index: 2;
+    }
     
+    .right {
+        position: relative;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        overflow-y: scroll;
+        width: 100%;
+    }
+
+    .box {
+        margin-top: 250px;
+        left: 0;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .box1 {
+        position: relative;
+        margin-top: 0;
+        width: 100%;
+        padding: 3px;
+        background-color: grey;
+    }
+
+    /*MODAL*/
+/*BACKGROUND MODAL*/
+.modal-wrap {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    padding-left: 6px;
+    padding-right: 6px;
+    width: calc(100% - 12px);
+    height: 100%;
+    background-color: white;
+}
+
+/*INSIDE MODAL*/
+.modal-inner {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.modal-head {
+    margin-top: 2px;
+    position: relative;
+    height: auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.modal-body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.modal-body>img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+}
+
+.modal-body>img:last-child {
+    position: relative;
+    width: 100%;
+    margin-bottom: 35px;
+    height: auto;
+    overflow: auto;
+}
+
+.container {
+    display: inline-grid;
+    grid: auto / auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 7px;
+    width: 100%;
+}
 }

@@ -38,7 +38,7 @@ $(document).ready(function () {
 
 		//find the image and animate the opacity
 		$(this).find("img").stop().animate({
-			opacity: 0
+			opacity: 1
 		}, 0);
 		//find and show the caption 
 		$(this).find(".caption").show();
