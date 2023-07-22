@@ -176,7 +176,7 @@ a:hover {
 .item1 {
     width: 100%;
     height: auto;
-    position:sticky;
+    position: sticky;
     background-color: white;
     top: 0;
     z-index: 3;
@@ -184,6 +184,7 @@ a:hover {
 
 .item2 {
     width: 100%;
+    height: auto;
 }
 
 /*MODAL*/
@@ -272,7 +273,7 @@ a:hover {
         grid-row-gap: 7px;
         width: 100%;
     }
-    
+
     .box1 {
         position: relative;
         margin-top: 10px;
@@ -284,7 +285,7 @@ a:hover {
 }
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 600px) {
     .container {
         display: inline-grid;
         grid: auto / auto;
@@ -292,7 +293,7 @@ a:hover {
         grid-row-gap: 7px;
         width: 100%;
     }
-    
+
 
     .modal-body>img {
         position: relative;
@@ -304,7 +305,7 @@ a:hover {
     .box1 {
         position: relative;
         margin-top: 10px;
-        width: 100%;
+        width: calc(100% - 6px);
         padding: 3px;
         margin-bottom: 10px;
         background-color: rgb(173, 173, 173);
