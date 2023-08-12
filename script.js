@@ -52,12 +52,3 @@ $(document).ready(function () {
 		}
 	);
 });
-
-
-function swipe(event) {
-	if (event.target.className === "modal") {
-	  if (event.touches[0].pageX > window.innerWidth / 2) {
-		event.target.style.display = "none";
-	  }
-	}
-  }

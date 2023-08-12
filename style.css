@@ -232,6 +232,13 @@ a:hover {
     overflow: auto;
 }
 
+.modal-body>video {
+    position: relative;
+    width: 70%;
+    height: auto;
+    overflow: auto;
+}
+
 /*IMAGE GRID*/
 .container {
     display: inline-grid;
