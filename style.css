@@ -309,6 +309,13 @@ a:hover {
         overflow: auto;
     }
 
+    .modal-body>video {
+        position: relative;
+        width: 100%;
+        height: auto;
+        overflow: auto;
+    }
+
     .box1 {
         position: relative;
         margin-top: 10px;
