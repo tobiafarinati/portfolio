@@ -52,3 +52,6 @@ $(document).ready(function () {
 		}
 	);
 });
+
+//autoplay in lowpower mode iphone
+
